@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBHelperProc.cs" />
+    <Compile Include="OrderDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IDataHelp\IDataHelp.csproj">
