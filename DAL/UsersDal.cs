@@ -33,7 +33,7 @@ namespace DAL
         {
             using (conn)
             {
-                return conn.QueryFirst<Users>("select * from Users where UserName='@UserName' and UserPwd='@UserPwd'", user);
+                return conn.QueryFirst<Users>("select * from Users where UserName=@UserName and UserPwd=@UserPwd", user);
             }
         }
         /// <summary>
@@ -45,7 +45,7 @@ namespace DAL
         {
             using (conn)
             {
-                return conn.Execute("insert into Users values('@UserName','@UserPwd','@Phone')", t);
+                return conn.Execute("insert into Users values(@UserName,@UserPwd,@Phone)", t);
             }
         }
 
@@ -62,7 +62,7 @@ namespace DAL
         {
             using (conn)
             {
-                return conn.Execute("update Users set UserName='@UserName',UserPwd='@UserPwd',Phone='@Phone' where UserId='@UserId'", t);
+                return conn.Execute("update Users set UserName=@UserName,UserPwd=@UserPwd,Phone=@Phone where UserId=@UserId", t);
             }
         }
     }

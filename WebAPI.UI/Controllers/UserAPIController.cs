@@ -30,8 +30,11 @@ namespace WebAPI.UI.Controllers
         /// <param name="users"></param>
         /// <returns></returns>
         [HttpGet]
-        public Users Get(Users users)
+        public Users Get(string Name,string Pwd)
         {
+            Users users = new Users();
+            users.UserName = Name;
+            users.UserPwd = Pwd;
             return bll.Login(users);
         }
         /// <summary>
